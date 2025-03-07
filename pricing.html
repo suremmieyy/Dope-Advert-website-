@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dope Adverts - Pricing/Order Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /*styling */
+    .pricing-section {
+      padding: 50px;
+      margin: 50px auto;
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .pricing-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    .pricing-table th,
+    .pricing-table td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+    .pricing-table th {
+      background-color: #FFA500; /* Orange background */
+      color: #fff;
+      font-size: 1.1rem;
+    }
+  
+    .pricing-table td {
+      font-weight: bold;
+      color: #333;
+    }
+    .order-form {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 2rem;
+    }
+    .order-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .order-form label {
+      font-weight: bold;
+      color: #333;
+    }
+    .order-form input,
+    .order-form select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .order-form button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #FFA500; /* Orange background */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .order-form button:hover {
+      background: #e68a00; /* Darker orange on hover */
+    }
+    #orderConfirmation {
+      margin-top: 20px;
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #c3e6cb;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="showcase.html">Showcase</a></li>
+      <li><a href="pricing.html" class="active">Pricing/Order Cart</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section class="pricing-section">
+      <h1>Pricing &amp; Order Cart</h1>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Product Variant</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luxury Watch</td>
+            <td>Classic design with modern features</td>
+            <td>From $1,200</td>
+          </tr>
+          <tr>
+            <td>Rare Chain</td>
+            <td>Elegant chain for every occasion</td>
+            <td>From $500</td>
+          </tr>
+          <tr>
+            <td>+Plus Necklace</td>
+            <td>Sparkling and sophisticated</td>
+            <td>From $2,000</td>
+          </tr>
+          <tr>
+            <td>Trendy Hat</td>
+            <td>Stylish and modern design</td>
+            <td>From $150</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="order-form">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+          <label for="product">Select Product:</label>
+          <select id="product" name="product" required>
+            <option value="">--Choose an option--</option>
+            <option value="Luxury Watch">Luxury Watch</option>
+            <option value="Rare Chain">Rare Chain</option>
+            <option value="+Plus Necklace">+Plus Necklace</option>
+            <option value="Trendy Hat">Trendy Hat</option>
+          </select>
+          
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+          
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+          
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+          
+          <button type="submit">Submit Order</button>
+        </form>
+        <div id="orderConfirmation">
+          <p>Thank you for your order! We will contact you shortly.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; The Dope Adverts.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

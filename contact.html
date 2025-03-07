@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dope Adverts - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* styling*/ 
+    .contact-section {
+      padding: 50px;
+      margin: 50px auto;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .contact-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #222; 
+      text-align: center;
+    }
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-section label {
+      font-weight: bold;
+      color: #333;
+    }
+    .contact-section input,
+    .contact-section textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-section button {
+      padding: 12px;
+      background-color: #FFA500;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-section button:hover {
+      background-color: #e68a00;
+    }
+    .contact-confirmation {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      display: none;
+    }
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .social-links h2 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: #FFA500;
+      font-size: 1.2rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #e68a00;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="showcase.html">Showcase</a></li>
+      <li><a href="pricing.html">Pricing/Order Cart</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section class="contact-section">
+      <h1>Get In Touch</h1>
+      <form id="contactForm">
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="contactName" placeholder="Your full name" required />
+        
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com" required />
+        
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="contactConfirmation" class="contact-confirmation">
+        <p>Thank you for reaching out! We'll get back to you as soon as possible.</p>
+      </div>
+      
+      <div class="social-links">
+        <h2>Connect With Us</h2>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; The Dope Adverts.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
